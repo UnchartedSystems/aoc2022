@@ -1,4 +1,4 @@
-(:require '[clojure.string])
+(require '[clojure.string :as str])
 
 (last (sort (map #(apply + (map read-string %)) (take-nth 2 (partition-by #(= "" %) (clojure.string/split-lines (slurp "input.txt")))))))
 
